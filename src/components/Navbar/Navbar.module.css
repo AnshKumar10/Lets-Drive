@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  padding: 0 1rem;
+}
+.menu a {
+  font-size: 1rem;
+  color: black;
+}
+.mobile_nav {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: #f8f8f8;
+    z-index: 10;
+    transition: left 0.5s;
+  }
+  .active {
+    left: 0;
+  }
+  .menu li {
+    margin: 1rem 0;
+  }
+  .mobile_nav {
+    display: block;
+    z-index: 10;
+  }
+}
